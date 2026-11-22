@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baby Shower de Thiago · 5 de diciembre</title>
+<meta name="description" content="Sábado 5 de diciembre de 2026 · 3:00 p. m. · Salón Social, Conjunto Residencial Bosquelargo. ¡Te esperamos!">
+<!-- Vista previa en WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Baby Shower de Thiago">
+<meta property="og:description" content="Sábado 5 de diciembre · 3:00 p. m. · Salón Social Bosquelargo. ¡Toca para abrir tu invitación!">
+<meta property="og:image" content="https://yelajuans.github.io/thiago/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://yelajuans.github.io/thiago/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f5f9fd">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f5f9fd;--w1:#d9e8f5;--w2:#e4f0f8;--ink:#2b3a4a;--soft:#53677c;--blue:#41689a;--card:rgba(255,255,255,.72);--line:#bcd3e8;--btn:#41689a;--btnink:#fff;--gold:#e9c98c;color-scheme:light}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-snap-type:y proximity;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Josefin Sans",system-ui,sans-serif;color:var(--ink);line-height:1.5;background:radial-gradient(circle at 15% 8%,var(--w1),transparent 45%),radial-gradient(circle at 90% 45%,var(--w2),transparent 50%),radial-gradient(circle at 20% 85%,var(--w1),transparent 45%),var(--bg);background-attachment:fixed}
+body.locked{overflow:hidden;height:100svh}
+.slide{position:relative;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:space-between;text-align:center;padding:calc(56px + env(safe-area-inset-top,0px)) 20px 0;overflow:hidden;scroll-snap-align:start}
+.slide>*{position:relative;z-index:2;max-width:480px;width:100%}
+.slide>svg{width:auto}
+.mid{justify-content:center;gap:18px;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
+.bub{position:absolute!important;z-index:1!important;border-radius:50%;width:auto!important;max-width:none!important;background:radial-gradient(circle at 30% 28%,#fff 0,rgba(255,255,255,.25) 28%,rgba(150,195,230,.38) 75%);border:1px solid rgba(150,190,225,.55);animation:bob 6s ease-in-out infinite;pointer-events:none}
+@keyframes bob{50%{transform:translateY(-16px) translateX(5px)}}
+.octo{height:clamp(160px,30svh,240px);animation:bob 5s ease-in-out infinite;overflow:visible}
+.boat{height:clamp(160px,28svh,250px);align-self:center;transform-origin:50% 90%;animation:rock 5s ease-in-out infinite;margin-bottom:-6px}
+@keyframes rock{50%{transform:rotate(3.5deg) translateY(-4px)}0%,100%{transform:rotate(-3.5deg)}}
+.whale{height:clamp(120px,24svh,190px);animation:bob 6s ease-in-out infinite}
+.star{height:90px;animation:spin 8s ease-in-out infinite}
+@keyframes spin{50%{transform:rotate(14deg)}}
+
+/* ---------- Pulpo animado ---------- */
+.octo .t{transform-box:fill-box;animation:sway 4.8s ease-in-out infinite}
+.octo .tl{transform-origin:100% 0}
+.octo .tr{transform-origin:0 0}
+.octo .tc{transform-origin:50% 0}
+.octo .t2{animation-delay:-.8s}.octo .t3{animation-delay:-1.6s}.octo .t4{animation-delay:-2.4s}.octo .t5{animation-delay:-3.2s}.octo .t6{animation-delay:-4s}
+@keyframes sway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
+.octo.awake .t{animation:wave 1.7s ease-in-out infinite}
+.octo.awake .t2{animation-delay:-.3s}.octo.awake .t3{animation-delay:-.6s}.octo.awake .t4{animation-delay:-.9s}.octo.awake .t5{animation-delay:-1.2s;animation-duration:1.3s}.octo.awake .t6{animation-delay:-.2s;animation-duration:1.3s}
+@keyframes wave{0%,100%{transform:rotate(-9deg)}50%{transform:rotate(10deg)}}
+.octo .closed{transition:opacity .25s ease .2s}
+.octo .eye{transform-box:fill-box;transform-origin:50% 50%;transform:scaleY(.05);opacity:0;transition:transform .45s cubic-bezier(.3,1.6,.6,1) .35s,opacity .15s ease .35s}
+.octo.awake .closed{opacity:0}
+.octo.awake .eye{transform:none;opacity:1;animation:blink 4.6s ease-in-out 2.4s infinite}
+@keyframes blink{0%,90%,100%{transform:none}94%{transform:scaleY(.08)}}
+.octo .pupil{transition:transform .6s ease}
+.octo.awake .pupil{animation:look 7s ease-in-out 3s infinite}
+@keyframes look{0%,30%,100%{transform:none}38%,55%{transform:translateX(-1.6px)}62%,80%{transform:translateX(1.6px)}}
+.octo .smile{transition:opacity .3s ease .4s}
+.octo .grin{opacity:0;transition:opacity .3s ease .4s}
+.octo.awake .smile{opacity:0}.octo.awake .grin{opacity:1}
+.octo .zz{opacity:1;transition:opacity .3s}
+.octo .zz text{font:600 18px "Josefin Sans",sans-serif;fill:#7fa3c4;animation:zz 3s ease-in-out infinite}
+.octo .zz text:nth-child(2){animation-delay:1s;font-size:14px}
+.octo .zz text:nth-child(3){animation-delay:2s;font-size:11px}
+@keyframes zz{0%{opacity:0;transform:translate(0,6px)}30%{opacity:1}100%{opacity:0;transform:translate(10px,-18px)}}
+.octo.awake .zz{opacity:0}
+
+/* ---------- Tipografía ---------- */
+.t1{font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-size:clamp(17px,5vw,24px);margin:0}
+.t2{font-weight:400;letter-spacing:.12em;text-transform:uppercase;font-size:clamp(14px,4vw,18px);margin:0;color:var(--soft)}
+.big{font-weight:300;letter-spacing:.02em;font-size:clamp(38px,13vw,60px);line-height:1;color:var(--blue);margin:2px 0}
+.name{font-family:"Pinyon Script","Snell Roundhand",cursive;font-size:clamp(70px,24vw,104px);line-height:1.05;color:var(--blue);margin:0}
+.msg{font-weight:300;font-size:clamp(19px,5.4vw,24px);line-height:1.5;margin:0}
+.date{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:12px}
+.date .side{font-weight:600;letter-spacing:.1em;font-size:clamp(13px,3.8vw,17px);text-transform:uppercase}
+.date .n{font-weight:300;font-size:clamp(64px,22vw,96px);line-height:1;border-inline:2px solid var(--ink);padding:0 14px}
+.count{display:flex;justify-content:center;gap:8px}
+.count div{min-width:62px;padding:8px 4px;border-radius:14px;background:var(--card);border:1px solid var(--line)}
+.count b{display:block;font-weight:600;font-size:28px;line-height:1.1}
+.count span{font-size:12px;color:var(--soft)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:13px 26px;border-radius:999px;background:var(--btn);color:var(--btnink);font:600 16px "Josefin Sans",system-ui,sans-serif;text-decoration:none;letter-spacing:.04em;border:0;cursor:pointer;box-shadow:0 8px 22px rgba(65,104,154,.28)}
+.btn:focus-visible,.cp:focus-visible,.music:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px 18px;-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+.card p{margin:10px 0 0;font-size:17px;font-weight:300}
+.card .note{font-size:15px;font-weight:400;padding:12px;border-radius:14px;border:1px dashed var(--line)}
+.script{font-family:"Pinyon Script","Snell Roundhand",cursive;font-size:clamp(34px,10vw,46px);color:var(--blue);margin:0}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease;transition-delay:var(--d,0s)}
+.on .rv,.all .rv{opacity:1;transform:none}
+.cp{margin-top:10px;background:none;border:0;color:var(--blue);font:600 14px "Josefin Sans",system-ui,sans-serif;text-decoration:underline;cursor:pointer;padding:10px;min-height:44px}
+.cp.u{user-select:text;-webkit-user-select:text;text-decoration:none;word-break:break-all;font-weight:400;font-size:13px;color:var(--ink)}
+
+/* ---------- Portada ---------- */
+.cover{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:24px;background:radial-gradient(circle at 20% 15%,var(--w1),transparent 50%),radial-gradient(circle at 85% 80%,var(--w2),transparent 55%),var(--bg);transition:opacity .8s ease,transform .8s cubic-bezier(.6,0,.3,1)}
+.cover.gone{opacity:0;transform:translateY(-6%);pointer-events:none}
+.cover .octo{height:clamp(170px,32svh,250px)}
+.cover .small{font-size:15px;color:var(--soft);margin:0;max-width:300px}
+.cover .btn{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.05);box-shadow:0 10px 30px rgba(65,104,154,.4)}}
+
+/* ---------- Botón de música ---------- */
+.music{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:52px;height:52px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.9);color:var(--blue);display:none;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 18px rgba(43,58,74,.18)}
+.music.show{display:flex}
+.music svg{width:24px;height:24px}
+.music .bars{display:none;gap:3px;align-items:flex-end;height:20px}
+.music .bars i{display:block;width:4px;background:var(--blue);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.music .bars i:nth-child(2){animation-delay:-.3s}.music .bars i:nth-child(3){animation-delay:-.6s}
+@keyframes eq{0%,100%{height:5px}50%{height:20px}}
+.music.playing .bars{display:flex}.music.playing .note{display:none}
+.music.hint::after{content:"Toca para la música";position:absolute;right:62px;white-space:nowrap;background:var(--ink);color:#fff;font-size:13px;padding:7px 12px;border-radius:999px}
+#yt{position:fixed;left:0;bottom:0;width:2px;height:2px;opacity:.01;pointer-events:none;z-index:-1;overflow:hidden}
+
+@media (prefers-reduced-motion:reduce){.octo,.boat,.whale,.star,.bub,.octo .t,.cover .btn,.octo .eye,.octo .pupil,.octo .zz text{animation:none!important}.rv{transition:none}}
+</style>
+</head>
+<body class="locked">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="boat" viewBox="0 0 220 230"><clipPath id="sc"><path d="M112 62L112 150L190 150Z"/></clipPath><path d="M112 42L40 150" stroke="#c99b66" stroke-width="2" fill="none"/><g fill="#8fb0cf"><path d="M92 76l12-4-6 16z"/><path d="M74 100l12-4-6 16z"/><path d="M58 124l12-4-6 16z"/></g><path d="M105 72L105 150L52 150Z" fill="#f3e2c4"/><g clip-path="url(#sc)"><rect x="100" y="60" width="95" height="92" fill="#f6ead2"/><rect x="100" y="84" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="108" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="132" width="95" height="12" fill="#8fb0cf"/></g><rect x="107" y="40" width="6" height="116" rx="2" fill="#c99b66"/><path d="M113 40l36 8-36 10z" fill="#7f9fc4"/><path d="M30 150H196Q186 198 150 204H76Q40 198 30 150Z" fill="#d9ac76" stroke="#b98551" stroke-width="2"/><path d="M30 150H196L194 163H32Z" fill="#8fb0cf"/><circle cx="112" cy="182" r="7" fill="#f6e6c8" stroke="#b98551" stroke-width="2"/></symbol>
+<symbol id="whale" viewBox="-14 -6 276 170"><path d="M20 100C20 40 90 20 150 30C210 40 240 80 235 110C230 140 190 150 120 150C60 150 20 140 20 100Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/><path d="M22 100C0 92-6 62 12 48C18 70 34 78 46 84Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/><path d="M60 132C120 152 200 148 230 116C200 134 110 140 60 132Z" fill="#f3e5c9"/><ellipse cx="112" cy="124" rx="24" ry="9" transform="rotate(-12 112 124)" fill="#7fa3c4"/><path d="M172 84q6 7 12 0M204 86q6 7 12 0M190 100q8 6 16 0" fill="none" stroke="#3b5a7a" stroke-width="2.6" stroke-linecap="round"/><circle cx="168" cy="98" r="6" fill="#f5a9b0" opacity=".6"/><circle cx="224" cy="100" r="6" fill="#f5a9b0" opacity=".6"/><g fill="none" stroke="#bcd8ee" stroke-width="4" stroke-linecap="round"><path d="M150 26Q146 10 138 6M150 26Q156 10 164 8"/></g></symbol>
+<symbol id="star" viewBox="0 0 100 100"><path d="M50 10L60 38L90 40L66 58L75 86L50 70L25 86L34 58L10 40L40 38Z" fill="#a9c9e3" stroke="#a9c9e3" stroke-width="10" stroke-linejoin="round"/><g fill="#fff"><circle cx="50" cy="22" r="2"/><circle cx="80" cy="42" r="2"/><circle cx="68" cy="76" r="2"/><circle cx="32" cy="76" r="2"/><circle cx="20" cy="42" r="2"/></g><path d="M41 52q4 4 8 0M54 52q4 4 8 0M48 60q3 3 6 0" fill="none" stroke="#3b5a7a" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="60" r="4" fill="#f5a9b0" opacity=".6"/><circle cx="66" cy="60" r="4" fill="#f5a9b0" opacity=".6"/></symbol>
+</defs></svg>
+
+<!-- Plantilla del pulpo (se clona en portada, inicio y regalos) -->
+<template id="octoTpl">
+<svg class="octo" viewBox="0 0 200 220" role="img" aria-label="Pulpo con gorro de marinero">
+ <g fill="none" stroke="#8fb0cf" stroke-width="14" stroke-linecap="round">
+  <g class="t tl t5"><path d="M62 95C22 100 10 130 30 152"/><circle cx="24" cy="125" r="2.6" fill="#fff" stroke="none"/></g>
+  <g class="t tr t6"><path d="M138 95C178 100 190 130 170 152"/><circle cx="176" cy="125" r="2.6" fill="#fff" stroke="none"/></g>
+  <g class="t tl t1"><path d="M70 110C40 140 30 170 50 195C58 205 72 198 66 188"/><circle cx="50" cy="150" r="2.6" fill="#fff" stroke="none"/><circle cx="44" cy="175" r="2.6" fill="#fff" stroke="none"/></g>
+  <g class="t tc t2"><path d="M85 120C70 160 76 190 92 205"/><circle cx="76" cy="150" r="2.6" fill="#fff" stroke="none"/><circle cx="84" cy="180" r="2.6" fill="#fff" stroke="none"/></g>
+  <g class="t tc t3"><path d="M115 120C128 160 124 190 108 205"/><circle cx="124" cy="150" r="2.6" fill="#fff" stroke="none"/><circle cx="116" cy="180" r="2.6" fill="#fff" stroke="none"/></g>
+  <g class="t tr t4"><path d="M130 110C160 140 170 170 150 195C142 205 128 198 134 188"/><circle cx="150" cy="150" r="2.6" fill="#fff" stroke="none"/><circle cx="156" cy="175" r="2.6" fill="#fff" stroke="none"/></g>
+ </g>
+ <ellipse cx="100" cy="76" rx="48" ry="50" fill="#9dbdd9" stroke="#7fa3c4" stroke-width="2"/>
+ <path d="M62 40H138L134 52Q100 60 66 52Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="1.5"/>
+ <path d="M66 46Q100 54 134 46" fill="none" stroke="#f6e6c8" stroke-width="3"/>
+ <path d="M70 40Q100 4 130 40Z" fill="#f6dfbd" stroke="#e3c79b" stroke-width="1.5"/>
+ <circle cx="100" cy="46" r="8" fill="#f6e6c8" stroke="#7fa3c4" stroke-width="1.5"/>
+ <path class="closed" d="M78 82q6 6 12 0M110 82q6 6 12 0" fill="none" stroke="#3b5a7a" stroke-width="2.4" stroke-linecap="round"/>
+ <g class="eye"><ellipse cx="84" cy="81" rx="8" ry="9.5" fill="#fff" stroke="#3b5a7a" stroke-width="2"/><g class="pupil"><circle cx="85" cy="83" r="5" fill="#2b3a4a"/><circle cx="87" cy="80.5" r="1.8" fill="#fff"/></g></g>
+ <g class="eye"><ellipse cx="116" cy="81" rx="8" ry="9.5" fill="#fff" stroke="#3b5a7a" stroke-width="2"/><g class="pupil"><circle cx="117" cy="83" r="5" fill="#2b3a4a"/><circle cx="119" cy="80.5" r="1.8" fill="#fff"/></g></g>
+ <path class="smile" d="M94 96q6 5 12 0" fill="none" stroke="#3b5a7a" stroke-width="2.4" stroke-linecap="round"/>
+ <path class="grin" d="M92 95q8 10 16 0Z" fill="#3b5a7a" stroke="#3b5a7a" stroke-width="2" stroke-linejoin="round"/>
+ <circle cx="70" cy="94" r="6" fill="#f5a9b0" opacity=".6"/><circle cx="130" cy="94" r="6" fill="#f5a9b0" opacity=".6"/>
+ <g class="zz" aria-hidden="true"><text x="146" y="44">z</text><text x="156" y="30">z</text><text x="164" y="18">z</text></g>
+</svg>
+</template>
+
+<div class="cover" id="cover">
+ <div data-octo="cover"></div>
+ <p class="t2">Tienes una invitación</p>
+ <p class="name" style="font-size:clamp(60px,20vw,88px)">Thiago</p>
+ <button class="btn" id="open" type="button"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>Abrir invitación</button>
+ <p class="small">Sube el volumen: la invitación tiene música</p>
+</div>
+
+<main>
+<section class="slide" id="s1">
+ <div data-octo="main" style="width:auto"></div>
+ <div>
+  <p class="t1 rv">La dulce espera está por terminar…</p>
+  <p class="t2 rv" style="--d:.3s;margin-top:14px">Te invitamos al</p>
+  <p class="big rv" style="--d:.6s">BABY SHOWER</p>
+  <p class="t2 rv" style="--d:.9s">de nuestro príncipe</p>
+  <p class="name rv" style="--d:1.2s">Thiago</p>
+ </div>
+ <svg class="boat" viewBox="0 0 220 230" role="img" aria-label="Velero"><use href="#boat"/></svg>
+</section>
+
+<section class="slide mid" id="s2">
+ <svg class="star" viewBox="0 0 100 100" aria-hidden="true" style="position:absolute;left:4%;top:22%;z-index:1"><use href="#star"/></svg>
+ <p class="t2 rv">Un mensaje de corazón</p>
+ <p class="msg rv" style="--d:.3s">El amor se va a multiplicar y en la familia habrá otra sonrisa iluminando nuestras vidas.</p>
+ <p class="msg rv" style="--d:.7s">Thiago llega a llenar de ternura nuestra casa y de amor nuestro corazón. Queremos que seas parte de este momento tan especial.</p>
+ <svg class="whale" viewBox="-14 -6 276 170" style="margin-top:10px" role="img" aria-label="Ballena durmiendo"><use href="#whale"/></svg>
+</section>
+
+<section class="slide mid" id="s3">
+ <p class="t2 rv">Acompaña a mis papitos</p>
+ <p class="t1 rv" style="--d:.2s">a celebrar mi llegada</p>
+ <div class="date rv" style="--d:.5s"><div class="side">Sábado<br>3:00 p. m.</div><div class="n">05</div><div class="side">Diciembre<br>2026</div></div>
+ <div class="count rv" style="--d:.8s" aria-label="Cuenta regresiva"><div><b id="d">–</b><span>días</span></div><div><b id="h">–</b><span>horas</span></div><div><b id="m">–</b><span>min</span></div><div><b id="s">–</b><span>seg</span></div></div>
+ <div class="card rv" style="--d:1s"><p class="t1" style="font-size:18px">Dirección del evento</p><p><b>Salón Social</b><br>Conjunto Residencial Bosquelargo</p><p><a class="btn" href="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ver ubicación en el mapa</a><br><button class="cp" type="button" data-u="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic">¿No abre? Copiar enlace</button></p></div>
+</section>
+
+<section class="slide mid" id="s4">
+ <div data-octo="gift" style="width:auto"></div>
+ <div class="card rv">
+  <p class="t1" style="font-size:20px;margin:0">Tu presencia es nuestro mejor regalo</p>
+  <p>Lo más importante para nosotros es que estés ahí, compartiendo este día.</p>
+  <p>Si deseas tener un detalle especial con nuestra familia, preparamos una lista de regalos de referencia donde podrás ver distintas opciones y apartar la que quieras.</p>
+  <p class="note">Las fotos son solo de referencia. Este enlace es únicamente para organizar los obsequios y evitar regalos repetidos.</p>
+  <p><a class="btn" href="https://smilebaby.app/f78ddb89-9cff-459a-867c-6d385c93f3b2" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10.5 3 7.5 3a2.5 2.5 0 0 0 0 5M12 8s1.5-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Ver lista de regalos</a><br><button class="cp" type="button" data-u="https://smilebaby.app/f78ddb89-9cff-459a-867c-6d385c93f3b2">¿No abre? Copiar enlace</button></p>
+ </div>
+ <p class="script rv" style="--d:.4s">Con todo nuestro amor</p>
+</section>
+</main>
+
+<button class="music" id="music" type="button" aria-label="Pausar o reproducir la música"><svg class="note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div id="yt" aria-hidden="true"><div id="ytp"></div></div>
+
+<script>
+(function(){
+ var VIDEO='vdqYvLy3Dus';
+
+ /* Pulpos */
+ var tpl=document.getElementById('octoTpl');
+ var octos={};
+ document.querySelectorAll('[data-octo]').forEach(function(slot){
+  var svg=tpl.content.firstElementChild.cloneNode(true);
+  if(slot.getAttribute('data-octo')==='gift'){svg.style.height='130px';svg.setAttribute('aria-hidden','true')}
+  slot.replaceWith(svg);octos[slot.getAttribute('data-octo')]=svg;
+ });
+
+ /* Burbujas + aparición al hacer scroll */
+ var S=document.querySelectorAll('.slide');
+ S.forEach(function(sl,k){for(var i=0;i<7;i++){var b=document.createElement('span'),z=14+Math.round(((i*37+k*17)%46));b.className='bub';b.style.cssText='left:'+((i*29+k*13)%92)+'%;top:'+((i*41+k*23)%88)+'%;width:'+z+'px;height:'+z+'px;animation-delay:'+(-(i*1.3))+'s;opacity:'+(.45+(i%3)*.18);sl.appendChild(b)}});
+ var opened=false;
+ if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x){
+   if(x.isIntersecting&&opened){x.target.classList.add('on');if(x.target.id==='s4')octos.gift.classList.add('awake')}
+  })},{threshold:.3});
+  S.forEach(function(s){io.observe(s)});
+ }else{document.body.classList.add('all');octos.gift.classList.add('awake')}
+
+ /* Cuenta regresiva (hora de Colombia, UTC-5) */
+ var t=Date.UTC(2026,11,5,20,0,0);function p(n){return n<10?'0'+n:''+n}
+ function tick(){var s=Math.floor(Math.max(0,t-Date.now())/1000);
+  document.getElementById('d').textContent=Math.floor(s/86400);
+  document.getElementById('h').textContent=p(Math.floor(s%86400/3600));
+  document.getElementById('m').textContent=p(Math.floor(s%3600/60));
+  document.getElementById('s').textContent=p(s%60)}
+ tick();setInterval(tick,1000);
+
+ /* Copiar enlaces */
+ document.querySelectorAll('.cp').forEach(function(b){b.addEventListener('click',function(){
+  var u=b.getAttribute('data-u');
+  function ok(){b.textContent='¡Enlace copiado!'}
+  function show(){b.className='cp u';b.textContent=u}
+  function fb(){try{var a=document.createElement('textarea');a.value=u;document.body.appendChild(a);a.select();var r=document.execCommand('copy');document.body.removeChild(a);r?ok():show()}catch(e){show()}}
+  try{navigator.clipboard.writeText(u).then(ok,fb)}catch(e){fb()}
+ })});
+
+ /* Música de YouTube */
+ var player=null,ready=false,want=false,playing=false,failed=false,pausedByHide=false;
+ var mbtn=document.getElementById('music');
+ function setPlaying(v){playing=v;mbtn.classList.toggle('playing',v);if(v)mbtn.classList.remove('hint')}
+ function play(){if(!ready||failed)return;try{player.unMute();player.setVolume(85);player.playVideo()}catch(e){}}
+ window.onYouTubeIframeAPIReady=function(){
+  player=new YT.Player('ytp',{width:'200',height:'200',videoId:VIDEO,
+   playerVars:{autoplay:0,controls:0,disablekb:1,fs:0,loop:1,playlist:VIDEO,playsinline:1,rel:0,modestbranding:1,iv_load_policy:3},
+   events:{
+    onReady:function(){ready=true;if(want)play()},
+    onStateChange:function(e){
+     if(e.data===1)setPlaying(true);
+     else if(e.data===2)setPlaying(false);
+     else if(e.data===0){try{player.seekTo(0);player.playVideo()}catch(x){}}
+    },
+    onError:function(){failed=true;mbtn.classList.remove('show')}
+   }});
+ };
+ var tag=document.createElement('script');tag.src='https://www.youtube.com/iframe_api';document.head.appendChild(tag);
+
+ mbtn.addEventListener('click',function(){
+  if(!ready)return;
+  if(playing){player.pauseVideo()}else{play()}
+ });
+ document.addEventListener('visibilitychange',function(){
+  if(!ready)return;
+  if(document.hidden&&playing){pausedByHide=true;player.pauseVideo()}
+  else if(!document.hidden&&pausedByHide){pausedByHide=false;play()}
+ });
+
+ /* Abrir invitación */
+ var cover=document.getElementById('cover');
+ setTimeout(function(){octos.cover.classList.add('awake');setTimeout(function(){octos.cover.classList.remove('awake')},2600)},1500);
+ document.getElementById('open').addEventListener('click',function(){
+  want=true;play();
+  opened=true;
+  octos.cover.classList.add('awake');
+  cover.classList.add('gone');
+  document.body.classList.remove('locked');
+  window.scrollTo(0,0);
+  document.getElementById('s1').classList.add('on');
+  setTimeout(function(){octos.main.classList.add('awake')},700);
+  setTimeout(function(){cover.remove()},900);
+  if(!failed)mbtn.classList.add('show');
+  setTimeout(function(){if(!playing&&!failed)mbtn.classList.add('hint')},3500);
+ });
+})();
+</script>
+</body>
+</html>
