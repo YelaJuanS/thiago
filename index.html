@@ -9,7 +9,8 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Baby Shower de Thiago">
 <meta property="og:description" content="Sábado 5 de diciembre · 3:00 p. m. · Salón Social Bosquelargo. ¡Toca para abrir tu invitación!">
-<meta property="og:image" content="https://yelajuans.github.io/thiago/preview.png">
+<meta property="og:image" content="https://yelajuans.github.io/thiago/preview.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://yelajuans.github.io/thiago/">
@@ -28,7 +29,8 @@ body.locked{overflow:hidden;height:100svh}
 .slide>*{position:relative;z-index:2;max-width:480px;width:100%}
 .slide>svg{width:auto}
 .mid{justify-content:center;gap:18px;padding-bottom:calc(40px + env(safe-area-inset-bottom,0px))}
-.bub{position:absolute!important;z-index:1!important;border-radius:50%;width:auto!important;max-width:none!important;background:radial-gradient(circle at 30% 28%,#fff 0,rgba(255,255,255,.25) 28%,rgba(150,195,230,.38) 75%);border:1px solid rgba(150,190,225,.55);animation:bob 6s ease-in-out infinite;pointer-events:none}
+.bub{position:absolute!important;z-index:1!important;border-radius:50%;max-width:none!important;background:radial-gradient(circle at 30% 28%,#fff 0,rgba(255,255,255,.25) 28%,rgba(150,195,230,.38) 75%);border:1px solid rgba(150,190,225,.55);animation:rise var(--dur,8s) ease-in-out infinite;pointer-events:none;opacity:0}
+@keyframes rise{0%{transform:translate(0,30px) scale(.7);opacity:0}15%{opacity:var(--o,.6)}50%{transform:translate(10px,-50px) scale(1)}80%{opacity:var(--o,.6)}100%{transform:translate(-6px,-140px) scale(1.05);opacity:0}}
 @keyframes bob{50%{transform:translateY(-16px) translateX(5px)}}
 .octo{height:clamp(160px,30svh,240px);animation:bob 5s ease-in-out infinite;overflow:visible}
 .boat{height:clamp(160px,28svh,250px);align-self:center;transform-origin:50% 90%;animation:rock 5s ease-in-out infinite;margin-bottom:-6px}
@@ -64,6 +66,47 @@ body.locked{overflow:hidden;height:100svh}
 .octo .zz text:nth-child(3){animation-delay:2s;font-size:11px}
 @keyframes zz{0%{opacity:0;transform:translate(0,6px)}30%{opacity:1}100%{opacity:0;transform:translate(10px,-18px)}}
 .octo.awake .zz{opacity:0}
+
+
+/* ---------- Barco ---------- */
+.boat{animation:none}
+.boat .hullg{transform-box:fill-box;transform-origin:50% 92%;animation:rock 4.5s ease-in-out infinite}
+.boat .flag{transform-box:fill-box;transform-origin:0 50%;animation:flag .9s ease-in-out infinite}
+@keyframes flag{0%,100%{transform:scaleX(1) skewY(0)}50%{transform:scaleX(.82) skewY(6deg)}}
+.boat .bunt{transform-box:fill-box;transform-origin:50% 0;animation:bunt 1.6s ease-in-out infinite}
+.boat .b2{animation-delay:-.5s}.boat .b3{animation-delay:-1s}
+@keyframes bunt{50%{transform:rotate(12deg)}}
+.boat .sailR,.boat .sailL{transform-box:fill-box;transform-origin:0 100%;animation:sail 4.5s ease-in-out infinite}
+.boat .sailL{transform-origin:100% 100%}
+@keyframes sail{50%{transform:scaleX(1.05)}}
+.boat .wv{animation:waves 4s linear infinite}
+.boat .w2{animation-duration:2.8s;animation-direction:reverse}
+@keyframes waves{to{transform:translateX(110px)}}
+
+/* ---------- Ballena ---------- */
+.whale{overflow:visible}
+.whale .tail{transform-box:fill-box;transform-origin:100% 80%;animation:tail 2.2s ease-in-out infinite}
+@keyframes tail{50%{transform:rotate(-14deg)}}
+.whale .fin{transform-box:fill-box;transform-origin:85% 30%;animation:fin 2.6s ease-in-out infinite}
+@keyframes fin{50%{transform:rotate(16deg)}}
+.whale .spout{transform-box:fill-box;transform-origin:50% 100%;animation:spout 3s ease-in-out infinite}
+@keyframes spout{0%,100%{transform:scale(.55);opacity:.35}40%{transform:scale(1.15);opacity:1}70%{transform:scale(1);opacity:.85}}
+.whale .drop{animation:drop 3s ease-in infinite}.whale .d2{animation-delay:.4s}
+@keyframes drop{0%,30%{transform:none;opacity:0}45%{opacity:1}100%{transform:translateY(22px);opacity:0}}
+.whale .zz text{font:600 18px "Josefin Sans",sans-serif;fill:#7fa3c4;animation:zz 3s ease-in-out infinite}
+.whale .zz text:nth-child(2){animation-delay:1s;font-size:14px}.whale .zz text:nth-child(3){animation-delay:2s;font-size:11px}
+
+/* ---------- Estrella, destellos y pez ---------- */
+.star{animation:starspin 6s ease-in-out infinite}
+@keyframes starspin{0%,100%{transform:rotate(-8deg) scale(1)}50%{transform:rotate(14deg) scale(1.08)}}
+.star .tw{animation:tw 2s ease-in-out infinite}
+.star .k2,.spark.k2{animation-delay:-.4s}.star .k3,.spark.k3{animation-delay:-.8s}.star .k4,.spark.k4{animation-delay:-1.2s}.star .k5,.spark.k5{animation-delay:-1.6s}
+@keyframes tw{0%,100%{opacity:1}50%{opacity:.15}}
+.spark{height:auto;animation:sparkle 2.4s ease-in-out infinite}
+@keyframes sparkle{0%,100%{transform:scale(.4) rotate(0);opacity:.2}50%{transform:scale(1) rotate(45deg);opacity:1}}
+.fish{position:absolute!important;z-index:1!important;width:70px!important;max-width:none!important;bottom:8%;left:0;animation:swim 14s linear infinite}
+.fish svg,.fish path{pointer-events:none}
+@keyframes swim{0%{transform:translateX(110vw) translateY(0)}25%{transform:translateX(75vw) translateY(-14px)}50%{transform:translateX(40vw) translateY(0)}75%{transform:translateX(5vw) translateY(-14px)}100%{transform:translateX(-90px) translateY(0)}}
 
 /* ---------- Tipografía ---------- */
 .t1{font-weight:600;letter-spacing:.07em;text-transform:uppercase;font-size:clamp(17px,5vw,24px);margin:0}
@@ -107,16 +150,26 @@ body.locked{overflow:hidden;height:100svh}
 @keyframes eq{0%,100%{height:5px}50%{height:20px}}
 .music.playing .bars{display:flex}.music.playing .note{display:none}
 .music.hint::after{content:"Toca para la música";position:absolute;right:62px;white-space:nowrap;background:var(--ink);color:#fff;font-size:13px;padding:7px 12px;border-radius:999px}
+.map{margin:14px 0 4px;border-radius:16px;overflow:hidden;border:1px solid var(--line);height:220px;background:var(--w2)}
+.map iframe{display:block;width:100%;height:100%;border:0}
+.sheet{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;background:var(--bg);animation:up .35s ease}
+.sheet[hidden]{display:none}
+@keyframes up{from{transform:translateY(100%)}to{transform:none}}
+.sheet-bar{display:flex;align-items:center;gap:8px;padding:calc(6px + env(safe-area-inset-top,0px)) 8px 6px;border-bottom:1px solid var(--line);background:rgba(255,255,255,.95)}
+.sheet-bar p{flex:1;margin:0;font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:15px;text-align:center}
+.sheet-x{width:44px;height:44px;border:0;background:none;color:var(--ink);display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%}
+.sheet-out{min-height:44px;display:flex;align-items:center;padding:0 10px;color:var(--blue);font-weight:600;font-size:14px}
+.sheet-body{position:relative;flex:1}
+.sheet-fb{margin:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--soft);font-size:14px;border-top:1px solid var(--line);background:rgba(255,255,255,.95)}.sheet-fb a{color:var(--blue);font-weight:600}
+.sheet-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#fff}
+.sheet-x:focus-visible,.sheet-out:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 #yt{position:fixed;left:0;bottom:0;width:2px;height:2px;opacity:.01;pointer-events:none;z-index:-1;overflow:hidden}
 
-@media (prefers-reduced-motion:reduce){.octo,.boat,.whale,.star,.bub,.octo .t,.cover .btn,.octo .eye,.octo .pupil,.octo .zz text{animation:none!important}.rv{transition:none}}
+@media (prefers-reduced-motion:reduce){.octo,.boat,.whale,.star,.bub,.cover .btn,.spark,.fish,.octo *,.boat *,.whale *,.star *{animation:none!important}.bub{opacity:.5}.rv{transition:none}}
 </style>
 </head>
 <body class="locked">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-<symbol id="boat" viewBox="0 0 220 230"><clipPath id="sc"><path d="M112 62L112 150L190 150Z"/></clipPath><path d="M112 42L40 150" stroke="#c99b66" stroke-width="2" fill="none"/><g fill="#8fb0cf"><path d="M92 76l12-4-6 16z"/><path d="M74 100l12-4-6 16z"/><path d="M58 124l12-4-6 16z"/></g><path d="M105 72L105 150L52 150Z" fill="#f3e2c4"/><g clip-path="url(#sc)"><rect x="100" y="60" width="95" height="92" fill="#f6ead2"/><rect x="100" y="84" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="108" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="132" width="95" height="12" fill="#8fb0cf"/></g><rect x="107" y="40" width="6" height="116" rx="2" fill="#c99b66"/><path d="M113 40l36 8-36 10z" fill="#7f9fc4"/><path d="M30 150H196Q186 198 150 204H76Q40 198 30 150Z" fill="#d9ac76" stroke="#b98551" stroke-width="2"/><path d="M30 150H196L194 163H32Z" fill="#8fb0cf"/><circle cx="112" cy="182" r="7" fill="#f6e6c8" stroke="#b98551" stroke-width="2"/></symbol>
-<symbol id="whale" viewBox="-14 -6 276 170"><path d="M20 100C20 40 90 20 150 30C210 40 240 80 235 110C230 140 190 150 120 150C60 150 20 140 20 100Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/><path d="M22 100C0 92-6 62 12 48C18 70 34 78 46 84Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/><path d="M60 132C120 152 200 148 230 116C200 134 110 140 60 132Z" fill="#f3e5c9"/><ellipse cx="112" cy="124" rx="24" ry="9" transform="rotate(-12 112 124)" fill="#7fa3c4"/><path d="M172 84q6 7 12 0M204 86q6 7 12 0M190 100q8 6 16 0" fill="none" stroke="#3b5a7a" stroke-width="2.6" stroke-linecap="round"/><circle cx="168" cy="98" r="6" fill="#f5a9b0" opacity=".6"/><circle cx="224" cy="100" r="6" fill="#f5a9b0" opacity=".6"/><g fill="none" stroke="#bcd8ee" stroke-width="4" stroke-linecap="round"><path d="M150 26Q146 10 138 6M150 26Q156 10 164 8"/></g></symbol>
-<symbol id="star" viewBox="0 0 100 100"><path d="M50 10L60 38L90 40L66 58L75 86L50 70L25 86L34 58L10 40L40 38Z" fill="#a9c9e3" stroke="#a9c9e3" stroke-width="10" stroke-linejoin="round"/><g fill="#fff"><circle cx="50" cy="22" r="2"/><circle cx="80" cy="42" r="2"/><circle cx="68" cy="76" r="2"/><circle cx="32" cy="76" r="2"/><circle cx="20" cy="42" r="2"/></g><path d="M41 52q4 4 8 0M54 52q4 4 8 0M48 60q3 3 6 0" fill="none" stroke="#3b5a7a" stroke-width="2" stroke-linecap="round"/><circle cx="38" cy="60" r="4" fill="#f5a9b0" opacity=".6"/><circle cx="66" cy="60" r="4" fill="#f5a9b0" opacity=".6"/></symbol>
 </defs></svg>
 
 <!-- Plantilla del pulpo (se clona en portada, inicio y regalos) -->
@@ -163,23 +216,54 @@ body.locked{overflow:hidden;height:100svh}
   <p class="t2 rv" style="--d:.9s">de nuestro príncipe</p>
   <p class="name rv" style="--d:1.2s">Thiago</p>
  </div>
- <svg class="boat" viewBox="0 0 220 230" role="img" aria-label="Velero"><use href="#boat"/></svg>
+ <svg class="boat" viewBox="0 0 220 232" role="img" aria-label="Velero navegando sobre las olas">
+ <clipPath id="sc"><path d="M112 62L112 150L190 150Z"/></clipPath>
+ <g class="hullg">
+  <path d="M112 42L40 150" stroke="#c99b66" stroke-width="2" fill="none"/>
+  <g fill="#8fb0cf"><path class="bunt" d="M92 76l12-4-6 16z"/><path class="bunt b2" d="M74 100l12-4-6 16z"/><path class="bunt b3" d="M58 124l12-4-6 16z"/></g>
+  <path class="sailL" d="M105 72L105 150L52 150Z" fill="#f3e2c4"/>
+  <g class="sailR"><g clip-path="url(#sc)"><rect x="100" y="60" width="95" height="92" fill="#f6ead2"/><rect x="100" y="84" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="108" width="95" height="12" fill="#8fb0cf"/><rect x="100" y="132" width="95" height="12" fill="#8fb0cf"/></g></g>
+  <rect x="107" y="40" width="6" height="116" rx="2" fill="#c99b66"/>
+  <path class="flag" d="M113 40l36 8-36 10z" fill="#7f9fc4"/>
+  <path d="M30 150H196Q186 198 150 204H76Q40 198 30 150Z" fill="#d9ac76" stroke="#b98551" stroke-width="2"/>
+  <path d="M30 150H196L194 163H32Z" fill="#8fb0cf"/>
+  <circle cx="112" cy="182" r="7" fill="#f6e6c8" stroke="#b98551" stroke-width="2"/>
+ </g>
+ <path class="wv w1" d="M-220 206 q27.5 -9 55 0 q27.5 9 55 0 q27.5 -9 55 0 q27.5 9 55 0 q27.5 -9 55 0 q27.5 9 55 0 q27.5 -9 55 0 q27.5 9 55 0 q27.5 -9 55 0 q27.5 9 55 0 q27.5 -9 55 0 q27.5 9 55 0 V232 H-220Z" fill="#bcd8ee" opacity=".75"/>
+ <path class="wv w2" d="M-220 214 q27.5 -7 55 0 q27.5 7 55 0 q27.5 -7 55 0 q27.5 7 55 0 q27.5 -7 55 0 q27.5 7 55 0 q27.5 -7 55 0 q27.5 7 55 0 q27.5 -7 55 0 q27.5 7 55 0 q27.5 -7 55 0 q27.5 7 55 0 V232 H-220Z" fill="#a3c6e4" opacity=".7"/>
+</svg>
 </section>
 
 <section class="slide mid" id="s2">
- <svg class="star" viewBox="0 0 100 100" aria-hidden="true" style="position:absolute;left:4%;top:22%;z-index:1"><use href="#star"/></svg>
+ <svg class="star" viewBox="0 0 100 100" aria-hidden="true" style="position:absolute;left:4%;top:9%;z-index:1;height:80px">
+ <path d="M50 10L60 38L90 40L66 58L75 86L50 70L25 86L34 58L10 40L40 38Z" fill="#a9c9e3" stroke="#a9c9e3" stroke-width="10" stroke-linejoin="round"/>
+ <g fill="#fff"><circle class="tw" cx="50" cy="22" r="2"/><circle class="tw k2" cx="80" cy="42" r="2"/><circle class="tw k3" cx="68" cy="76" r="2"/><circle class="tw k4" cx="32" cy="76" r="2"/><circle class="tw k5" cx="20" cy="42" r="2"/></g>
+ <path d="M41 52q4 4 8 0M54 52q4 4 8 0M48 60q3 3 6 0" fill="none" stroke="#3b5a7a" stroke-width="2" stroke-linecap="round"/>
+ <circle cx="38" cy="60" r="4" fill="#f5a9b0" opacity=".6"/><circle cx="66" cy="60" r="4" fill="#f5a9b0" opacity=".6"/>
+</svg><svg class="spark " viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;right:10%;top:14%;width:22px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg><svg class="spark k3" viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;right:22%;bottom:30%;width:14px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg>
  <p class="t2 rv">Un mensaje de corazón</p>
  <p class="msg rv" style="--d:.3s">El amor se va a multiplicar y en la familia habrá otra sonrisa iluminando nuestras vidas.</p>
  <p class="msg rv" style="--d:.7s">Thiago llega a llenar de ternura nuestra casa y de amor nuestro corazón. Queremos que seas parte de este momento tan especial.</p>
- <svg class="whale" viewBox="-14 -6 276 170" style="margin-top:10px" role="img" aria-label="Ballena durmiendo"><use href="#whale"/></svg>
+ <svg class="whale" style="margin-top:10px" viewBox="-14 -40 276 204" role="img" aria-label="Ballena durmiendo">
+ <path class="tail" d="M22 100C0 92-6 62 12 48C18 70 34 78 46 84Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/>
+ <path d="M20 100C20 40 90 20 150 30C210 40 240 80 235 110C230 140 190 150 120 150C60 150 20 140 20 100Z" fill="#8fb0cf" stroke="#7fa3c4" stroke-width="2"/>
+ <path d="M60 132C120 152 200 148 230 116C200 134 110 140 60 132Z" fill="#f3e5c9"/>
+ <g class="fin"><ellipse cx="112" cy="124" rx="24" ry="9" transform="rotate(-12 112 124)" fill="#7fa3c4"/></g>
+ <path d="M172 84q6 7 12 0M204 86q6 7 12 0M190 100q8 6 16 0" fill="none" stroke="#3b5a7a" stroke-width="2.6" stroke-linecap="round"/>
+ <circle cx="168" cy="98" r="6" fill="#f5a9b0" opacity=".6"/><circle cx="224" cy="100" r="6" fill="#f5a9b0" opacity=".6"/>
+ <g class="spout" fill="none" stroke="#bcd8ee" stroke-width="4" stroke-linecap="round"><path d="M150 26Q146 10 138 6M150 26Q156 10 164 8"/><circle class="drop" cx="134" cy="2" r="3" fill="#bcd8ee" stroke="none"/><circle class="drop d2" cx="168" cy="4" r="2.5" fill="#bcd8ee" stroke="none"/></g>
+ <g class="zz" aria-hidden="true"><text x="226" y="62">z</text><text x="236" y="46">z</text><text x="244" y="32">z</text></g>
+</svg>
 </section>
 
 <section class="slide mid" id="s3">
+ <svg class="spark k2" viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;left:8%;top:10%;width:18px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg><svg class="spark k4" viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;right:8%;top:20%;width:24px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg>
+ <svg class="fish" viewBox="0 0 80 44" aria-hidden="true"><path d="M58 22L78 8V36Z" fill="#f2b98c"/><ellipse cx="34" cy="22" rx="30" ry="18" fill="#f6c89f" stroke="#e3a877" stroke-width="2"/><path d="M28 6Q36 0 44 6" fill="#f2b98c"/><circle cx="18" cy="18" r="3.5" fill="#2b3a4a"/><circle cx="19.2" cy="16.8" r="1.2" fill="#fff"/><path d="M10 27q4 3 8 0" fill="none" stroke="#3b5a7a" stroke-width="2" stroke-linecap="round"/><path d="M36 12q6 10 0 20M46 13q5 9 0 18" fill="none" stroke="#e3a877" stroke-width="2" stroke-linecap="round"/></svg>
  <p class="t2 rv">Acompaña a mis papitos</p>
  <p class="t1 rv" style="--d:.2s">a celebrar mi llegada</p>
  <div class="date rv" style="--d:.5s"><div class="side">Sábado<br>3:00 p. m.</div><div class="n">05</div><div class="side">Diciembre<br>2026</div></div>
  <div class="count rv" style="--d:.8s" aria-label="Cuenta regresiva"><div><b id="d">–</b><span>días</span></div><div><b id="h">–</b><span>horas</span></div><div><b id="m">–</b><span>min</span></div><div><b id="s">–</b><span>seg</span></div></div>
- <div class="card rv" style="--d:1s"><p class="t1" style="font-size:18px">Dirección del evento</p><p><b>Salón Social</b><br>Conjunto Residencial Bosquelargo</p><p><a class="btn" href="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Ver ubicación en el mapa</a><br><button class="cp" type="button" data-u="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic">¿No abre? Copiar enlace</button></p></div>
+ <div class="card rv" style="--d:1s"><p class="t1" style="font-size:18px">Dirección del evento</p><p><b>Salón Social</b><br>Conjunto Residencial Bosquelargo</p><div class="map"><iframe title="Mapa del Conjunto Residencial Bosquelargo" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3977.8380350452608!2d-75.1902698!3d4.441231200000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e38c51aac0ec8a3%3A0x39c207d4a0f96913!2sParque%20Residencial%20Bosque%20Largo!5e0!3m2!1ses!2sco!4v1795381275893!5m2!1ses!2sco" allowfullscreen loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div><p><a class="btn" href="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Cómo llegar</a><br><button class="cp" type="button" data-u="https://maps.app.goo.gl/wBvW7dparKbg8Z6G6?g_st=ic">¿No abre? Copiar enlace</button></p></div>
 </section>
 
 <section class="slide mid" id="s4">
@@ -189,13 +273,25 @@ body.locked{overflow:hidden;height:100svh}
   <p>Lo más importante para nosotros es que estés ahí, compartiendo este día.</p>
   <p>Si deseas tener un detalle especial con nuestra familia, preparamos una lista de regalos de referencia donde podrás ver distintas opciones y apartar la que quieras.</p>
   <p class="note">Las fotos son solo de referencia. Este enlace es únicamente para organizar los obsequios y evitar regalos repetidos.</p>
-  <p><a class="btn" href="https://smilebaby.app/f78ddb89-9cff-459a-867c-6d385c93f3b2" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10.5 3 7.5 3a2.5 2.5 0 0 0 0 5M12 8s1.5-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Ver lista de regalos</a><br><button class="cp" type="button" data-u="https://smilebaby.app/f78ddb89-9cff-459a-867c-6d385c93f3b2">¿No abre? Copiar enlace</button></p>
+  <p><a class="btn" id="giftBtn" href="https://smilebaby.app/app/f78ddb89-9cff-459a-867c-6d385c93f3b2" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M12 8v13M3 12h18M12 8S10.5 3 7.5 3a2.5 2.5 0 0 0 0 5M12 8s1.5-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>Ver lista de regalos</a><br><button class="cp" type="button" data-u="https://smilebaby.app/app/f78ddb89-9cff-459a-867c-6d385c93f3b2">¿No abre? Copiar enlace</button></p>
  </div>
+ <svg class="spark k2" viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;left:10%;top:8%;width:20px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg><svg class="spark k5" viewBox="0 0 24 24" aria-hidden="true" style="position:absolute;right:12%;top:12%;width:16px;z-index:1"><path d="M12 1C13 8 16 11 23 12C16 13 13 16 12 23C11 16 8 13 1 12C8 11 11 8 12 1Z" fill="#e9c98c"/></svg>
  <p class="script rv" style="--d:.4s">Con todo nuestro amor</p>
 </section>
 </main>
 
 <button class="music" id="music" type="button" aria-label="Pausar o reproducir la música"><svg class="note" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg><span class="bars" aria-hidden="true"><i></i><i></i><i></i></span></button>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetT" hidden>
+ <div class="sheet-bar">
+  <button class="sheet-x" id="sheetX" type="button" aria-label="Cerrar lista de regalos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <p id="sheetT">Lista de regalos</p>
+  <a class="sheet-out" href="https://smilebaby.app/app/f78ddb89-9cff-459a-867c-6d385c93f3b2" target="_blank" rel="noopener">Abrir aparte</a>
+ </div>
+ <div class="sheet-body">
+  <iframe id="giftFrame" title="Lista de regalos de Thiago"></iframe>
+ </div>
+ <p class="sheet-fb">¿Se ve en blanco? <a href="https://smilebaby.app/app/f78ddb89-9cff-459a-867c-6d385c93f3b2" target="_blank" rel="noopener">Ábrela aparte aquí</a></p>
+</div>
 <div id="yt" aria-hidden="true"><div id="ytp"></div></div>
 
 <script>
@@ -213,7 +309,7 @@ body.locked{overflow:hidden;height:100svh}
 
  /* Burbujas + aparición al hacer scroll */
  var S=document.querySelectorAll('.slide');
- S.forEach(function(sl,k){for(var i=0;i<7;i++){var b=document.createElement('span'),z=14+Math.round(((i*37+k*17)%46));b.className='bub';b.style.cssText='left:'+((i*29+k*13)%92)+'%;top:'+((i*41+k*23)%88)+'%;width:'+z+'px;height:'+z+'px;animation-delay:'+(-(i*1.3))+'s;opacity:'+(.45+(i%3)*.18);sl.appendChild(b)}});
+ S.forEach(function(sl,k){for(var i=0;i<7;i++){var b=document.createElement('span'),z=14+Math.round(((i*37+k*17)%46));b.className='bub';b.style.cssText='left:'+((i*29+k*13)%92)+'%;top:'+((i*41+k*23)%88)+'%;width:'+z+'px;height:'+z+'px;animation-delay:'+(-(i*1.3))+'s;--dur:'+(6+(i%4)*1.5)+'s;--o:'+(.45+(i%3)*.18);sl.appendChild(b)}});
  var opened=false;
  if('IntersectionObserver' in window){
   var io=new IntersectionObserver(function(e){e.forEach(function(x){
@@ -269,6 +365,18 @@ body.locked{overflow:hidden;height:100svh}
   if(document.hidden&&playing){pausedByHide=true;player.pauseVideo()}
   else if(!document.hidden&&pausedByHide){pausedByHide=false;play()}
  });
+
+ /* Lista de regalos dentro de la invitación */
+ var sheet=document.getElementById('sheet'),gf=document.getElementById('giftFrame'),gBtn=document.getElementById('giftBtn');
+ gBtn.addEventListener('click',function(e){
+  e.preventDefault();
+  if(!gf.src)gf.src=gBtn.href;
+  sheet.hidden=false;document.body.style.overflow='hidden';
+  document.getElementById('sheetX').focus();
+ });
+ function closeSheet(){sheet.hidden=true;document.body.style.overflow='';gBtn.focus()}
+ document.getElementById('sheetX').addEventListener('click',closeSheet);
+ sheet.addEventListener('keydown',function(e){if(e.key==='Escape')closeSheet()});
 
  /* Abrir invitación */
  var cover=document.getElementById('cover');
